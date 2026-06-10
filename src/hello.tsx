@@ -1,5 +1,5 @@
 import React from 'react'
-import {Tree} from 'antd'
+import {Flex, Tree} from 'antd'
 import type {DataNode} from 'antd/es/tree'
 import {
     FileImageOutlined,
@@ -82,18 +82,12 @@ const fileTreeSource: FileNode[] = [
 
 // 节点 title：左侧文件名，右侧 suffix 图标；blockNode 下 width:100% 才能把图标顶到最右
 const renderNodeTitle = (node: FileNode) => (
-    <div style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        width: '100%',
-        gap: 8,
-    }}>
+    <Flex justify="space-between" align="center" gap={8} style={{width: '100%'}}>
         <span>{node.name}</span>
         <span style={{flexShrink: 0, color: 'rgba(0,0,0,0.45)'}}>
             {node.suffix ?? (node.kind === 'dir' ? <FolderOutlined/> : <FileOutlined/>)}
         </span>
-    </div>
+    </Flex>
 )
 
 const toTreeData = (nodes: FileNode[]): DataNode[] =>

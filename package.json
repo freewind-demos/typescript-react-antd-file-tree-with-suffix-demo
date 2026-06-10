@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "start": "vite --open"
+  },
+  "dependencies": {
+    "@ant-design/icons": "4.7.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.21",
+    "@types/react": "17.0.40",
+    "@types/react-dom": "17.0.13",
+    "@vitejs/plugin-react": "^3.0.1",
+    "antd": "5.0.5",
+    "vite": "^4.0.4"
+  }
+}
